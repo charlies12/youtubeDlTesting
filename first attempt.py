@@ -3,12 +3,13 @@ from pytube import YouTube
 from tkinter import *
 from tkinter import messagebox
 
+# I don't need this but I'll just leave it here 
 YLOG = os.environ.get('YOUTUBE_LOG1')
 YPASS = os.environ.get('YOUTUBE_PASS1')
 
-
+"""Tried to practice with using tkinter """
 # def download_video():
-#     download_location = 'D:/YT_DWLD'
+#     download_location = 'D:/YT_DWLD' # change it to your dl choice
 #     video_address = url_input.get()
 #     if len(video_address) == 0:
 #         messagebox.showinfo(title="Blank entry.", message="Input video address.")
@@ -45,12 +46,12 @@ YPASS = os.environ.get('YOUTUBE_PASS1')
 # window.mainloop()
 
 
-""""""
+"""Ended up removing it because I'm the only one who uses this."""
 
 video_url = ""
-download_location = 'D:/YT_DWLD'
+download_location = 'D:/YT_DWLD' # change this to download location of choice
 
-yt = YouTube(video_url, use_oauth=True, allow_oauth_cache=True)
+yt = YouTube(video_url, use_oauth=True, allow_oauth_cache=True) # logged in with a throw-away account
 yt.streams.filter(progressive=True)
 
 print(yt.streams.order_by('resolution'))
